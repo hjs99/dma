@@ -13,9 +13,9 @@ assign dma.r_addr = ll.addr;
 assign dma.r_len  = 4*6-1;
 assign dma.dack   = 1'b1;
 
-assign ll.ack     = dma.r_ack;
+assign ll.ack     = dma.ack;
 assign ll.dvld     = dma.vald;
-assign ll.rdata    = dma.rdata;
+assign ll.rdata    = dma.data;
 
 always@(posedge clk or negedge rstn)
 begin
